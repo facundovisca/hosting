@@ -1,0 +1,24 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.frase {
+    opacity: 0.04; /* Opacidad inicial de la frase */
+    font-size: 24px;
+    font-style: italic;
+    line-height: 1.5;
+    cursor:crosshair;
+    transition: opacity 4s ease; /* Transición de la opacidad durante 1 segundo */
+
+}
