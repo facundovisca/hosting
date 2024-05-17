@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center; /* Centramos el contenido horizontalmente */
+    align-items: center; /* Centramos el contenido verticalmente */
+    padding: 20px 5%; /* Ajustamos el espaciado alrededor del contenido */
+    width: 90%; /* Ajustamos el ancho del contenedor */
+}
+
+.column {
+    width: 50%;
+    text-align: left;
+    margin: 0 2%; /* Reducimos el margen entre columnas */
+}
+
+.frase {
+    opacity: 0.04; /* Opacidad inicial de la frase */
+    font-size: 24px;
+    font-style: italic;
+    line-height: 1.5;
+    cursor: crosshair;
+    transition: opacity 4s ease; /* Transición de la opacidad durante 1 segundo */
+}
+
+.poem-line {
+    opacity: 0.04;
+    transition: opacity 0.5s;
+    font-size: 22px;
+    cursor: crosshair;
+    font-style: italic;
+    white-space: pre; /* Mantener los espacios y tabulados */
+    transition: opacity 4s ease; /* Transición de la opacidad durante 1 segundo */
+margin: 2px;
+}

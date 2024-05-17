@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>No estarás</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <p id="frase" class="frase">No estarás para nada, no serás ni recuerdo,<br>y cuando piense en ti pensaré un pensamiento<br>que oscuramente trata de acordarse de ti.</p>
+    </div>
+
+    <!-- Reproductor de audio (oculto) -->
+    <audio id="audioPlayer" style="display: none;">
+        <source src="cortazar.wav" type="audio/wav">
+        Your browser does not support the audio element.
+    </audio>
+    <script src="../funciones.js"></script> <!-- Asegúrate de que la ruta sea correcta -->
+
+    <script>
+        var contadorClics = 0; // Inicializamos el contador de clics
+
+        // Función para cambiar la opacidad de la frase y reproducir el audio
+        function cambiarOpacidadYReproducirAudio() {
+            var frase = document.getElementById("frase");
+            var audio = document.getElementById("audioPlayer");
+            
+            frase.style.opacity = "1"; // Cambiar la opacidad de la frase a 1
+            audio.play(); // Reproducir el audio
+
+            // Incrementar el contador de clics
+            contadorClics++;
+
+            // Si el contador de clics es igual o mayor a 5, llamamos a dirigir_seccion
+            if (contadorClics >= 3) {
+                dirigir_seccion();
+            }
+        }
+
+        // Agregar un event listener para detectar clics en la frase
+        document.getElementById("frase").addEventListener('click', cambiarOpacidadYReproducirAudio);
+
+        // Agregar un event listener para detectar cuando el audio termina y ejecutar dirigir_seccion
+        document.getElementById("audioPlayer").addEventListener('ended', function() {
+            dirigir_seccion();
+        });
+    </script>
+</body>
+</html>

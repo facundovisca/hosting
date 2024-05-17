@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>No te salves</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> <!-- Agregar Bootstrap CSS -->
+    <link rel="stylesheet" href="styles.css"> <!-- Referencia a tu hoja de estilos existente -->
+
+</head>
+<body>
+    <div class="container">
+        <div class="column">
+            <p class="poem-line">No te quedes inmóvil</p>
+            <p class="poem-line">al borde del camino</p>
+            <p class="poem-line">no congeles el júbilo</p>
+            <p class="poem-line">no quieras con desgana</p>
+            <p class="poem-line">no te salves ahora</p>
+            <p class="poem-line">ni nunca</p>
+            <p class="poem-line">                no te salves</p>
+            <p class="poem-line">no te llenes de calma</p>
+            <p class="poem-line">no reserves del mundo</p>
+            <p class="poem-line">sólo un rincón tranquilo</p>
+            <p class="poem-line">no dejes caer los</p>
+            <p class="poem-line">párpados</p>
+            <p class="poem-line">pesados como juicios</p>
+            <p class="poem-line">no te quedes sin labios</p>
+            <p class="poem-line">no te duermas sin</p>
+            <p class="poem-line">sueño</p>
+            <p class="poem-line">no te pienses sin sangre</p>
+            <p class="poem-line">no te juzgues sin</p>
+            <p class="poem-line">tiempo</p>
+        </div>
+        <div class="column">
+<br>
+            <p class="poem-line">pero si</p>
+            <p class="poem-line">                 pese a todo</p>
+            <p class="poem-line">no puedes evitarlo</p>
+            <p class="poem-line">y congelas el júbilo</p>
+            <p class="poem-line">y quieres con desgana</p>
+            <p class="poem-line">y te salvas ahora</p>
+            <p class="poem-line">y te llenas de calma</p>
+            <p class="poem-line">y reservas del mundo</p>
+            <p class="poem-line">sólo un rincón tranquilo</p>
+            <p class="poem-line">y dejas caer los</p>
+            <p class="poem-line">párpados</p>
+            <p class="poem-line">pesados como juicios</p>
+            <p class="poem-line">y te secas sin labios</p>
+            <p class="poem-line">y te duermes sin sueño</p>
+            <p class="poem-line">y te piensas sin sangre</p>
+            <p class="poem-line">y te juzgas sin tiempo</p>
+            <p class="poem-line">y te quedas inmóvil</p>
+            <p class="poem-line">al borde del camino</p>
+            <p class="poem-line">y te salvas</p>
+            <p class="poem-line">                     entonces</p>
+            <p class="poem-line">no te quedes conmigo</p>
+        </div>
+    </div>
+
+    <!-- Reproductor de audio (oculto) -->
+    <audio id="audioPlayer" style="display: none;">
+        <source src="benedetti.wav" type="audio/wav">
+        Your browser does not support the audio element.
+    </audio>
+    <script src="../funciones.js"></script> <!-- Asegúrate de que la ruta sea correcta -->
+
+    <script>
+        var contadorClics = 0; // Inicializamos el contador de clics
+
+        // Función para cambiar la opacidad de la frase y reproducir el audio
+        function cambiarOpacidadYReproducirAudio() {
+            var frase = document.querySelectorAll(".poem-line");
+            var audio = document.getElementById("audioPlayer");
+            
+            frase.forEach(function(line) {
+                line.style.opacity = "1"; // Cambiar la opacidad de cada línea a 1
+            });
+            audio.play(); // Reproducir el audio
+
+            // Incrementar el contador de clics
+            contadorClics++;
+
+            // Si el contador de clics es igual o mayor a 3, llamamos a dirigir_seccion
+            if (contadorClics >= 3) {
+                dirigir_seccion();
+            }
+        }
+
+        // Agregar un event listener para detectar clics en las líneas del poema
+        document.querySelectorAll(".poem-line").forEach(function(line) {
+            line.addEventListener('click', cambiarOpacidadYReproducirAudio);
+        });
+
+        // Agregar un event listener para detectar cuando el audio termina y ejecutar dirigir_seccion
+        document.getElementById("audioPlayer").addEventListener('ended', function() {
+            dirigir_seccion();
+        });
+    </script>
+</body>
+</html>

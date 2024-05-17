@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Estás ahí?</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <p id="frase" class="frase" onclick="dirigir_seccion();">Hola ¿estás ahí?</p>
+    </div>
+
+    <script src="../funciones.js"></script>
+
+    <script>
+        // Función para cambiar la opacidad de la frase
+        function cambiarOpacidadYReproducirAudio() {
+            var frase = document.getElementById("frase");
+            frase.style.opacity = "1"; // Cambiar la opacidad de la frase a 1
+        }
+
+        // Ejecutar la función automáticamente cuando el DOM esté cargado
+        document.addEventListener('DOMContentLoaded', cambiarOpacidadYReproducirAudio);
+    </script>
+</body>
+</html>
