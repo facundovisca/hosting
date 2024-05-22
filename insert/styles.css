@@ -1,0 +1,124 @@
+body {
+  font-family: "Lucida Console", Monaco, monospace;
+  background-color: #000;
+  color: #0F0; /* Letras verdes */
+  font-size: 10px; /* Reducir el tamaño de la fuente */
+  margin: 0;
+  padding: 0;
+}
+
+.container-fluid {
+  height: 100vh; /* Cambiamos la altura a 100vh para que ocupe toda la pantalla */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  margin-top: 20vh; /* Centrar verticalmente arriba de la pantalla */
+  font-size: 24px;
+}
+
+.speech-input {
+  width: 80%; /* Ajustar el ancho del campo de texto */
+  max-width: 500px; /* Establecer un ancho máximo */
+}
+
+.card {
+  background-color: #333; /* Fondo oscuro */
+  border: 2px solid #0F0; /* Borde verde */
+  border-radius: 3px; /* Reducir la esquina redondeada */
+  box-shadow: 0 0 3px rgba(0, 255, 0, 0.5); /* Sombra verde */
+  padding: 5px; /* Reducir el relleno */
+  margin-bottom: 10px; /* Separación entre cards */
+  width: 90%; /* Reducir el ancho del card */
+  max-width: 300px; /* Ancho máximo del card */
+  word-wrap: break-word; /* Permitir que el texto se divida en palabras */
+}
+
+.speech-input {
+  width: calc(100% - px); /* Ajuste del ancho del campo de texto */
+  height: 80px; /* Aumentar la altura del campo de texto */
+  margin-bottom: 20px;
+  background-color: #222; /* Fondo oscuro */
+  color: #0F0; /* Letras verdes */
+  border: 2px solid #0F0; /* Borde verde */
+  border-radius: 6px; /* Aumentar la esquina redondeada */
+  padding: 10px; /* Aumentar el padding */
+  text-align: left; /* Alinear texto a la izquierda */
+  font-size: 16px; /* Aumentar el tamaño de fuente del campo de texto */
+  position: fixed; /* Posicionar fijamente el input */
+  top: 20px; /* Distancia desde la parte superior */
+  left: 50%; /* Centrar horizontalmente */
+  transform: translateX(-50%); /* Centrar horizontalmente */
+  z-index: 999; /* Asegurar que esté sobre otros elementos */
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.button {
+  padding: 6px 12px; /* Reducir el padding del botón */
+  font-size: 12px; /* Reducir el tamaño del texto del botón */
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border: none;
+  border-radius: 3px; /* Reducir la esquina redondeada */
+}
+
+.btn-like {
+  background-color: #0F0; /* Verde */
+  color: #000; /* Letras negras */
+}
+
+.btn-hate {
+  background-color: #F30; /* Naranja oscuro */
+  color: #000; /* Letras negras */
+}
+
+.counter {
+  display: flex;
+  justify-content: space-between;
+}
+
+.counter span.hate {
+  color: #F30; /* Color anaranjado oscuro */
+}
+
+.speech {
+  /* Establecer un tamaño fijo para el texto */
+  width: 100%;
+  max-width: 100%;
+  overflow: auto; /* Permitir el desplazamiento vertical si el texto es demasiado largo */
+}
+
+.sketch-canvas {
+  width: 100%; /* Ocupa todo el ancho de la mitad derecha */
+  height: 100vh; /* Ocupa toda la altura del viewport */
+  background-color: #000; /* Fondo negro */
+}
+
+.card-grid {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.container {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 300px;
+}
+
+.btn-send {
+  padding: 6px 12px;
+  font-size: 14px;
+}
