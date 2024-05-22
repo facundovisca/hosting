@@ -1,0 +1,70 @@
+body {
+    font-family: 'CustomFont', sans-serif;
+    background-color: #000;
+    color: #0f0; /* Letras verdes vibrantes */
+    font-size: 16px;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+.tweet-container {
+    background-color: #222; /* Fondo oscuro */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.tweet-input {
+    font-size: 16px;
+    height: 100px;
+    background-color: #111; /* Fondo del textarea más oscuro */
+    color: #0f0; /* Letras verdes vibrantes */
+    border: 2px solid #0f0; /* Borde verde */
+}
+
+.btn-primary {
+    background-color: #0f0; /* Botón de color verde */
+    border-color: #0f0; /* Borde del botón verde */
+}
+
+.btn-primary:hover {
+    background-color: #090; /* Color verde más oscuro al pasar el mouse */
+    border-color: #090; /* Borde verde más oscuro al pasar el mouse */
+}
+
+.card {
+    background-color: #333; /* Fondo de las tarjetas más oscuro */
+    color: #0f0; /* Letras verdes vibrantes */
+    border-color: #0f0; /* Borde de las tarjetas verde */
+}
+
+.like-card {
+    border: 2px solid #0f0; /* Borde verde */
+    color: #0f0; /* Texto verde */
+    padding: 1em;
+
+
+}
+
+.hate-card {
+    border: 2px solid #f00; /* Borde rojo */
+    color: #f00; /* Texto rojo */
+    padding: 1em;
+
+}
+
+.tweet-comment {
+    margin-top: 10px;
+}
+
+.comments-container {
+    border-top: 1px solid #0f0;
+    padding-top: 10px;
+}
+
+.hate-card .comments-container {
+    border-top: 1px solid #f00;
+}
