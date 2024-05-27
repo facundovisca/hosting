@@ -1,0 +1,55 @@
+body {
+    background-color: black;
+    margin: 2px;
+    padding: 1px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+a {
+    color: white;
+    font-style: italic;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.resaltar {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.resaltar:hover {
+    background-color: white;
+    color: black;
+}
+
+.texto-grande {
+    font-size: 3em; /* Ajusta este valor según tus necesidades */
+    text-align: left;
+}
+
+.texto-medio {
+    font-size: 1.5em;
+
+}
+
+.texto-chico {
+    font-size: 1em;
+}
+
+
+
+
+.center {
+    text-align: center;
+}
+
+.resaltado {
+    background: white;
+    color: black;}

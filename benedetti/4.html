@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>no dejes caer los párpados</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="center">
+        <a href="5.html" target="blank" onclick="window.open(this.href, '_blank', 'width=500,height=100,left=50,top=500'); return false;" class="texto-medio">
+            <span class="resaltar">No te llenes de calma</span> <br>
+            No reserves del mundo solo un rincón tranquilo<br>
+           No dejes caer los párpados pesados como juicios
+        </a>
+    </div>
+    <audio id="audioPlayer" style="display:none;">
+    </audio>
+
+    <script>
+        window.onload = function() {
+            // Obtener el número del archivo de audio desde la URL
+            var audioNumber = 4;
+
+            // Construir la ruta del archivo de audio
+            var audioSrc = 'data/' + audioNumber + '.wav';
+
+            // Configurar el origen del archivo de audio
+            var audio = document.getElementById("audioPlayer");
+            audio.src = audioSrc;
+
+            // Reproducir el audio
+            audio.play();
+        };
+    </script>
+</body>
+</html>

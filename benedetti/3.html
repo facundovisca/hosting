@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>no te llenes de calma</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="center">
+        <a href="4.html" target="blank" onclick="window.open(this.href, '_blank', 'width=500,height=120,left=700,top=50'); return false;" class="texto-medio">
+            No congeles el júbilo, no quieras con desgana<br>
+          <span class="resaltar">No te salves ahora ni nunca, no te salves</span>
+
+        </a>
+    </div>
+    <audio id="audioPlayer" style="display:none;">
+    </audio>
+
+    <script>
+        window.onload = function() {
+            // Obtener el número del archivo de audio desde la URL
+            var audioNumber = 3;
+
+            // Construir la ruta del archivo de audio
+            var audioSrc = 'data/' + audioNumber + '.wav';
+
+            // Configurar el origen del archivo de audio
+            var audio = document.getElementById("audioPlayer");
+            audio.src = audioSrc;
+
+            // Reproducir el audio
+            audio.play();
+        };
+    </script>
+</body>
+</html>

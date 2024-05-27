@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>pero, si pese a todo</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="center">
+      <a
+        href="7.html"
+        target="blank"
+        onclick="window.open(this.href, '_blank', 'width=450,height=100,left=800,top=650'); return false;"
+        class="texto-medio"
+      >
+        <span class="resaltar">Pero, si pese a todo no puedes evitarlo</span><br>
+        Y congelas el júbilo y quieres con desgana
+      </a>
+    </div>
+    <audio id="audioPlayer" style="display:none;">
+    </audio>
+
+    <script>
+        window.onload = function() {
+            // Obtener el número del archivo de audio desde la URL
+            var audioNumber = 6;
+
+            // Construir la ruta del archivo de audio
+            var audioSrc = 'data/' + audioNumber + '.wav';
+
+            // Configurar el origen del archivo de audio
+            var audio = document.getElementById("audioPlayer");
+            audio.src = audioSrc;
+
+            // Reproducir el audio
+            audio.play();
+        };
+    </script>
+  </body>
+</html>

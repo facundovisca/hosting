@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>y te quedas inmóvil al borde del camino y te salvas</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="center">
+      <a
+        href="10.html"
+        target="blank"
+        onclick="window.open(this.href, '_blank', 'width=500,height=140, top=200, left=400'); return false;"
+        class="texto-medio"
+        >
+        Y te piensas sin sangre y te juzgas sin tiempo<br />
+        <span class="resaltar"
+          >Y te quedas inmóvil al borde del camino y te salvas</span
+        >
+      </a>
+    </div>
+    <audio id="audioPlayer" style="display:none;">
+    </audio>
+
+    <script>
+        window.onload = function() {
+            // Obtener el número del archivo de audio desde la URL
+            var audioNumber = 9;
+
+            // Construir la ruta del archivo de audio
+            var audioSrc = 'data/' + audioNumber + '.wav';
+
+            // Configurar el origen del archivo de audio
+            var audio = document.getElementById("audioPlayer");
+            audio.src = audioSrc;
+
+            // Reproducir el audio
+            audio.play();
+        };
+    </script>
+  </body>
+</html>
